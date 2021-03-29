@@ -44,11 +44,10 @@ body {
 
 .section.second {
     height: auto;
-    padding: 6.25rem 0;
     font-family: Overpass;
 }
 
-.section.second main {
+.section.second main, .section.fourth main {
     margin-top: 6.25rem;
     padding: 0 2.625rem;
 }
@@ -62,10 +61,36 @@ body {
     margin-bottom: 3rem;
 }
 
-.section.second p {
+.section.second p, .section.fourth p {
     letter-spacing: 1px;
     line-height: 1.8rem;
     font-weight: 100;
+}
+
+.section.third {
+    height: 170px;
+    position: relative;
+}
+
+.section.third img {
+    width: 100%;
+}
+
+.section.fourth {
+    background-image: url("/blogr-landing-page/images/bg-pattern-circles.svg"),
+        linear-gradient(to bottom right,#2c2d3f, #3f4164);
+    background-position: center -700%;
+    background-size: auto 94.5%, 100% 100%;
+    background-repeat: no-repeat, no-repeat;
+    border-top-right-radius: 8rem;
+    border-bottom-left-radius: 8rem;
+    color: var(--white);
+}
+
+.section.fourth h2 {
+    padding: 0 0.385rem;
+    margin-top: 250px;
+    font-size: 1.6rem;
 }
 
 .header {
