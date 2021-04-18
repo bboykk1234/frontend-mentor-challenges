@@ -17,16 +17,54 @@
 <body>
     <section class="first section">
         <header class="header">
-            <h1>
-                <a href="/" rel="home">
-                    <img src="/blogr-landing-page/images/logo.svg" alt="Blogr">
-                </a>
-            </h1>
-            <nav>
-                <button class="toggler-btn">
-                    <span class="hamburger-icon"></span>
-                </button>
-            </nav>
+            <div class="header-navbar">
+                <h1>
+                    <a href="/" rel="home">
+                        <img src="/blogr-landing-page/images/logo.svg" alt="Blogr">
+                    </a>
+                </h1>
+                <nav>
+                    <button class="toggler-btn">
+                        <span class="hamburger-icon"></span>
+                    </button>
+                </nav>
+            </div>
+            <div class="header-nav-modal">
+                <div class="header-nav-option-group">
+                    <div class="header-nav-option">
+                        <span>Product</span>
+                        <img class="d-inline v-middle px-3" src="./images/icon-arrow-dark.svg" />
+                        <!-- <ul class="header-nav-list">
+                        <li>Product #1</li>
+                        <li>Product #2</li>
+                        <li>Product #3</li>
+                    </ul> -->
+                    </div>
+                    <div class="header-nav-option">
+                        <span>Company</span>
+                        <img class="d-inline v-middle px-3" src="./images/icon-arrow-dark.svg" />
+                        <!-- <ul class="header-nav-list">
+                        <li>Product #1</li>
+                        <li>Product #2</li>
+                        <li>Product #3</li>
+                    </ul> -->
+                    </div>
+                    <div class="header-nav-option">
+                        <span>Connect</span>
+                        <img class="d-inline v-middle px-3" src="./images/icon-arrow-dark.svg" />
+                        <!-- <ul class="header-nav-list">
+                        <li>Product #1</li>
+                        <li>Product #2</li>
+                        <li>Product #3</li>
+                    </ul> -->
+                    </div>
+                </div>
+                <hr class="horizontal-line" />
+                <div class="header-nav-btn-group">
+                    <a class="header-nav-btn" href="#">Login</a>
+                    <a class="header-nav-btn header-nav-color-btn" href="#">Sign Up</a>
+                </div>
+            </div>
         </header>
         <main class="intro-main">
             <div>
@@ -107,41 +145,58 @@
         </main>
     </section>
 
-    Free, open, simple
-    Blogr is a free and open source application backed by a large community of helpful developers. It supports
-    features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
-    and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
-
-    Powerful tooling
-    Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze,
-    but
-    capable of producing even the most complicated sites.
-
-    Product
-
-    Overview
-    Pricing
-    Marketplace
-    Features
-    Integrations
-
-    Company
-
-    About
-    Team
-    Blog
-    Careers
-
-    Connect
-
-    Contact
-    Newsletter
-    LinkedIn
-
-    <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Your Name Here</a>.
-    </div>
+    <section class="fifth section">
+        <img class="img" src="/blogr-landing-page/images/illustration-laptop-mobile.svg">
+        <main>
+            <h2>Free, open, simple</h2>
+            <p>
+                Blogr is a free and open source application backed by a large community of helpful developers. It
+                supports
+                features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting
+                tools,
+                and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+            </p>
+            <h2>Powerful tooling</h2>
+            <p>
+                Batteries included. We built a simple and straightforward CLI tool that makes customization and
+                deployment a
+                breeze, but capable of producing even the most complicated sites.
+            </p>
+        </main>
+    </section>
+    <section class="section footer">
+        <footer>
+            <h1 class="footer-header text-white">Blogr</h1>
+            <div class="footer-list-body">
+                <h3 class="text-white text-weight-100 mt-0">Product</h3>
+                <ul class="footer-list text-gray">
+                    <li>Overview</li>
+                    <li>Pricing</li>
+                    <li>Marketplace</li>
+                    <li>Features</li>
+                    <li>Integrations</li>
+                </ul>
+            </div>
+            <div class="footer-list-body">
+                <h3 class="text-white text-weight-100">Company</h3>
+                <ul class="footer-list text-gray">
+                    <li>About</li>
+                    <li>Team</li>
+                    <li>Blog</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+            <div class="footer-list-body">
+                <h3 class="text-white text-weight-100">Connect</h3>
+                <ul class="footer-list text-gray">
+                    <li>Contact</li>
+                    <li>Newsletter</li>
+                    <li>Blog</li>
+                    <li>LinkedIn</li>
+                </ul>
+            </div>
+        </footer>
+    </section>
 </body>
 
 </html>
