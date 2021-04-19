@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overpass">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" defer src="script.js"></script>
     <title>Frontend Mentor | [Blogr]</title>
 </head>
 
@@ -24,39 +25,72 @@
                     </a>
                 </h1>
                 <nav>
-                    <button class="toggler-btn">
-                        <span class="hamburger-icon"></span>
+                    <button id="js-toggler-btn" class="header-nav-btn" data-target="header-nav-modal">
+                        <img aria-expanded="false" src="./images/icon-hamburger.svg" />
                     </button>
                 </nav>
             </div>
-            <div class="header-nav-modal">
-                <div class="header-nav-option-group">
-                    <div class="header-nav-option">
-                        <span>Product</span>
-                        <img class="d-inline v-middle px-3" src="./images/icon-arrow-dark.svg" />
-                        <!-- <ul class="header-nav-list">
-                        <li>Product #1</li>
-                        <li>Product #2</li>
-                        <li>Product #3</li>
-                    </ul> -->
+            <div id="header-nav-modal" class="collapse">
+                <div class="header-nav-item-group">
+                    <div class="header-nav-item">
+                        <div class="header-nav-accordion js-header-nav-accordion">
+                            <span>Product</span>
+                            <img aria-expanded="false" class="d-inline v-middle px-3" src="./images/icon-arrow-dark.svg" />
+                        </div>
+                        <ul class="header-nav-panel collapse">
+                            <li>
+                                <a href="#">Overview</a>
+                            </li>
+                            <li>
+                                <a href="#">Pricing</a>
+                            </li>
+                            <li>
+                                <a href="#">Marketplace</a>
+                            </li>
+                            <li>
+                                <a href="#">Features</a>
+                            </li>
+                            <li>
+                                <a href="#">Integrations</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="header-nav-option">
-                        <span>Company</span>
-                        <img class="d-inline v-middle px-3" src="./images/icon-arrow-dark.svg" />
-                        <!-- <ul class="header-nav-list">
-                        <li>Product #1</li>
-                        <li>Product #2</li>
-                        <li>Product #3</li>
-                    </ul> -->
+                    <div class="header-nav-item">
+                        <div class="header-nav-accordion js-header-nav-accordion">
+                            <span>Company</span>
+                            <img aria-expanded="false" class="d-inline v-middle px-3" src="./images/icon-arrow-dark.svg" />
+                        </div>
+                        <ul class="header-nav-panel collapse">
+                            <li>
+                                <a href="#">About</a>
+                            </li>
+                            <li>
+                                <a href="#">Team</a>
+                            </li>
+                            <li>
+                                <a href="#">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#">Careers</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="header-nav-option">
-                        <span>Connect</span>
-                        <img class="d-inline v-middle px-3" src="./images/icon-arrow-dark.svg" />
-                        <!-- <ul class="header-nav-list">
-                        <li>Product #1</li>
-                        <li>Product #2</li>
-                        <li>Product #3</li>
-                    </ul> -->
+                    <div class="header-nav-item">
+                        <div class="header-nav-accordion js-header-nav-accordion">
+                            <span>Connect</span>
+                            <img aria-expanded="false" class="d-inline v-middle px-3" src="./images/icon-arrow-dark.svg" />
+                        </div>
+                        <ul class="header-nav-panel collapse">
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                            <li>
+                                <a href="#">Newsletter</a>
+                            </li>
+                            <li>
+                                <a href="#">LinkedIn</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <hr class="horizontal-line" />
@@ -80,29 +114,6 @@
                 </div>
             </div>
         </main>
-        <!-- Product
-
-        Overview
-        Pricing
-        Marketplace
-        Features
-        Integrations
-
-        Company
-
-        About
-        Team
-        Blog
-        Careers
-
-        Connect
-
-        Contact
-        Newsletter
-        LinkedIn
-
-        Login
-        Sign Up -->
     </section>
     <section class="second section">
         <h2>Designed for the future</h2>
@@ -191,7 +202,6 @@
                 <ul class="footer-list text-gray">
                     <li>Contact</li>
                     <li>Newsletter</li>
-                    <li>Blog</li>
                     <li>LinkedIn</li>
                 </ul>
             </div>

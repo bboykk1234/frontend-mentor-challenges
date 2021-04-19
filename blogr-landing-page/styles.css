@@ -22,6 +22,14 @@ body {
     min-width: 375px;
 }
 
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
 .text-white {
     color: var(--white);
 }
@@ -44,6 +52,17 @@ body {
 
 .v-middle {
     vertical-align: middle;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.header-nav-accordion {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .px-5 {
@@ -189,16 +208,21 @@ body {
     justify-content: space-between;
 }
 
-.header-nav-modal {
+#header-nav-modal {
     background-color: var(--white);
     border-radius: .5rem;
     box-shadow: 0 5px 10px 0 hsl(237, 17%, 21%, 0.5);
-    display: flex;
-    flex-direction: column;
     padding: 2rem;
 }
 
-.header-nav-list {
+#header-nav-modal.collapse,
+.header-nav-panel.collapse {
+    overflow: hidden;
+    height: 0;
+    padding: 0;
+}
+
+.header-nav-panel {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -210,16 +234,27 @@ body {
     color: var(--very-dark-black-blue);
 }
 
-.header-nav-option {
-    margin-bottom: 2rem;
+.header-nav-btn {
+    margin-bottom: 1.5rem;
 }
 
-.header-nav-option-group .header-nav-option:last-child {
+.header-nav-panel {
+    margin: 1rem 0;
+    background-color: hsl(240, 7%, 94%);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.header-nav-panel a {
+    color: var(--very-drak-grayish-blue);
+}
+
+.header-nav-panel li {
     margin-bottom: 1rem;
 }
 
-.header-nav-btn {
-    margin-bottom: 1.5rem;
+.header-nav-panel li:last-child {
+    margin-bottom: 0;
 }
 
 .header-nav-color-btn {
@@ -301,13 +336,21 @@ body {
     margin-left: 1rem;
 }
 
-.toggler-btn {
+.header-nav-btn {
     border: 0;
     background-color: transparent;
 }
 
 .hamburger-icon {
     background-image: url("/blogr-landing-page/images/icon-hamburger.svg");
+    display: inline-block;
+    width: 40px;
+    height: 18px;
+}
+
+.close-icon {
+    background-image: url("/blogr-landing-page/images/icon-close.svg");
+    background-repeat: no-repeat;
     display: inline-block;
     width: 40px;
     height: 18px;
