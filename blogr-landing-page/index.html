@@ -16,28 +16,30 @@
 </head>
 
 <body>
-    <section class="first section">
-        <header class="header">
-            <div class="header-navbar">
+    <section class="section banner-section">
+        <header class="navbar">
+            <div class="navbar__brand">
                 <h1>
                     <a href="/" rel="home">
                         <img src="/blogr-landing-page/images/logo.svg" alt="Blogr">
                     </a>
                 </h1>
-                <nav>
-                    <button id="js-toggler-btn" class="header-nav-btn" data-target="header-nav-modal">
+                <nav class="header__nav">
+                    <button id="menu-toggler" data-js-target="#menu-modal">
                         <img aria-expanded="false" src="./images/icon-hamburger.svg" />
                     </button>
                 </nav>
             </div>
-            <div id="header-nav-modal" class="collapse">
-                <div class="header-nav-item-group">
-                    <div class="header-nav-item">
-                        <div class="header-nav-accordion js-header-nav-accordion">
+            <div id="menu-modal" class="collapse">
+                <div class="accordion" id="menu-accordion">
+                    <div class="card">
+                        <div class="card__header" data-js-target="#product-menu-list" data-js-toggle="collapse"
+                            aria-expanded="false">
                             <span>Product</span>
-                            <img aria-expanded="false" class="d-inline v-middle px-3" src="./images/icon-arrow-dark.svg" />
+                            <img data-js-icon="collapse" class="d-inline v-middle px-3"
+                                src="./images/icon-arrow-dark.svg" />
                         </div>
-                        <ul class="header-nav-panel collapse">
+                        <ul id="product-menu-list" class="card__body collapse">
                             <li>
                                 <a href="#">Overview</a>
                             </li>
@@ -55,12 +57,15 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="header-nav-item">
-                        <div class="header-nav-accordion js-header-nav-accordion">
+
+                    <div class="card">
+                        <div class="card__header" data-js-target="#company-menu-list" data-js-toggle="collapse"
+                            aria-expanded="false">
                             <span>Company</span>
-                            <img aria-expanded="false" class="d-inline v-middle px-3" src="./images/icon-arrow-dark.svg" />
+                            <img data-js-icon="collapse" class="d-inline v-middle px-3"
+                                src="./images/icon-arrow-dark.svg" />
                         </div>
-                        <ul class="header-nav-panel collapse">
+                        <ul id="company-menu-list" class="card__body collapse">
                             <li>
                                 <a href="#">About</a>
                             </li>
@@ -75,12 +80,15 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="header-nav-item">
-                        <div class="header-nav-accordion js-header-nav-accordion">
+
+                    <div class="card">
+                        <div class="card__header" data-js-target="#connect-menu-list" data-js-toggle="collapse"
+                            aria-expanded="false">
                             <span>Connect</span>
-                            <img aria-expanded="false" class="d-inline v-middle px-3" src="./images/icon-arrow-dark.svg" />
+                            <img data-js-icon="collapse" class="d-inline v-middle px-3"
+                                src="./images/icon-arrow-dark.svg" />
                         </div>
-                        <ul class="header-nav-panel collapse">
+                        <ul id="connect-menu-list" class="card__body collapse">
                             <li>
                                 <a href="#">Contact</a>
                             </li>
@@ -94,13 +102,12 @@
                     </div>
                 </div>
                 <hr class="horizontal-line" />
-                <div class="header-nav-btn-group">
-                    <a class="header-nav-btn" href="#">Login</a>
-                    <a class="header-nav-btn header-nav-color-btn" href="#">Sign Up</a>
+                <div class="navbar__btn-group">
+                    <a class="navbar__btn" href="#">Login</a>
+                    <a class="navbar__btn navbar__btn--bg" href="#">Sign Up</a>
                 </div>
-            </div>
         </header>
-        <main class="intro-main">
+        <main class="banner-main">
             <div>
                 <h2>
                     <span>A modern</span> publishing platform
@@ -108,16 +115,16 @@
                 <h3>
                     <span>Grow your audience and build your</span> online brand
                 </h3>
-                <div class="intro-link-btn-group">
-                    <a href="/" class="intro-link-btn reverse">Start for Free</a>
-                    <a href="/" class="intro-link-btn">Learn More</a>
+                <div class="banner-main__link-btn-group">
+                    <a href="/" class="banner-main__link-btn reverse">Start for Free</a>
+                    <a href="/" class="banner-main__link-btn">Learn More</a>
                 </div>
             </div>
         </main>
     </section>
-    <section class="second section">
+    <section class="section intro-section">
         <h2>Designed for the future</h2>
-        <img class="img" src="/blogr-landing-page/images/illustration-editor-mobile.svg">
+        <img class="full-img" src="/blogr-landing-page/images/illustration-editor-mobile.svg">
         <main>
             <h2>Introducing an extensible editor</h2>
             <p>
@@ -139,10 +146,10 @@
             </p>
         </main>
     </section>
-    <section class="section third">
+    <section class="section phones-section">
         <img src="/blogr-landing-page/images/illustration-phones.svg" alt="Phones">
     </section>
-    <section class="section fourth">
+    <section class="section infra-section">
         <main>
             <h2>
                 State of the Art Infrastructure
@@ -156,8 +163,8 @@
         </main>
     </section>
 
-    <section class="fifth section">
-        <img class="img" src="/blogr-landing-page/images/illustration-laptop-mobile.svg">
+    <section class="section strengths-section">
+        <img class="full-img" src="/blogr-landing-page/images/illustration-laptop-mobile.svg">
         <main>
             <h2>Free, open, simple</h2>
             <p>
@@ -177,10 +184,10 @@
     </section>
     <section class="section footer">
         <footer>
-            <h1 class="footer-header text-white">Blogr</h1>
-            <div class="footer-list-body">
-                <h3 class="text-white text-weight-100 mt-0">Product</h3>
-                <ul class="footer-list text-gray">
+            <h1 class="footer__brand">Blogr</h1>
+            <div class="footer__list-body">
+                <h3 class="footer__list-title mt-0">Product</h3>
+                <ul class="footer__list">
                     <li>Overview</li>
                     <li>Pricing</li>
                     <li>Marketplace</li>
@@ -188,18 +195,18 @@
                     <li>Integrations</li>
                 </ul>
             </div>
-            <div class="footer-list-body">
-                <h3 class="text-white text-weight-100">Company</h3>
-                <ul class="footer-list text-gray">
+            <div class="footer__list-body">
+                <h3 class="footer__list-title">Company</h3>
+                <ul class="footer__list">
                     <li>About</li>
                     <li>Team</li>
                     <li>Blog</li>
                     <li>Careers</li>
                 </ul>
             </div>
-            <div class="footer-list-body">
-                <h3 class="text-white text-weight-100">Connect</h3>
-                <ul class="footer-list text-gray">
+            <div class="footer__list-body">
+                <h3 class="footer__list-title">Connect</h3>
+                <ul class="footer__list">
                     <li>Contact</li>
                     <li>Newsletter</li>
                     <li>LinkedIn</li>
