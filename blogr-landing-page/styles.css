@@ -14,6 +14,7 @@ html {
     min-height: 100%;
     background-color: var(--white);
     font-family: Ubuntu;
+    overflow-x: hidden;
 }
 
 body {
@@ -211,12 +212,8 @@ button {
 }
 
 .intro-section {
-    margin-top: 6.25rem;
+    margin: 6.25rem 0 14rem 0;
     padding: 0 2.625rem;
-}
-
-.infra-section main {
-    margin-top: 6.25rem;
 }
 
 .strengths-section {
@@ -227,8 +224,8 @@ button {
     flex-direction: column;
 }
 
-.strengths-section img {
-    width: 140%;
+.illustration-laptop-mobile {
+    width: 100%;
 }
 
 .phones-section {
@@ -249,17 +246,19 @@ button {
     border-top-right-radius: 8rem;
     border-bottom-left-radius: 8rem;
     color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .infra-section h2 {
     padding: 0 0.385rem;
-    margin-top: 250px;
     font-size: 1.6rem;
 }
 
 .intro-section,
-.strengths-section,
-.footer {
+.strengths-section {
     height: auto;
     font-family: Overpass;
 }
@@ -292,8 +291,10 @@ button {
 
 /* #region footer */
 .footer {
+    height: auto;
     background-color: var(--very-dark-black-blue);
     border-top-right-radius: 8rem;
+    font-family: Overpass;
 }
 
 .footer__list {
@@ -369,4 +370,151 @@ button {
 .card__body li:last-child {
     margin-bottom: 0;
 }
+
+.phone-img {
+    width: 100%;
+    position: absolute;
+    bottom: 70%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.illustration-editor-desktop {
+    display: none;
+}
+
+.illustration-laptop-desktop {
+    display: none;
+}
 /* #endregion card */
+
+@media (min-width: 375px) {
+    .phone-img {
+        width: 375px;
+    }
+}
+
+@media (min-width: 1440px) {
+    html {
+        font-size: 18px;
+    }
+
+    .illustration-editor-mobile,
+    .illustration-laptop-mobile {
+        display: none;
+    }
+
+    .illustration-editor-desktop {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50px;
+        right: 0;
+        margin: auto;
+        width: auto;
+        height: 180%;
+    }
+
+    .illustration-laptop-desktop {
+        display: block;
+        position: absolute;
+        width: auto;
+        height: 200%;
+        top: 0;
+        left: -480px;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .section-header {
+        width: 100%;
+        margin: 0 0 6.25rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-header h2 {
+        margin: 0;
+    }
+
+    .section-content {
+        text-align: left;
+        display: flex;
+    }
+
+    .section-reverse-content {
+        flex-direction: row-reverse;
+    }
+
+    .section-content main {
+        width: 50%;
+    }
+
+    .intro-section {
+        position: relative;
+        padding: 0 9rem;
+    }
+
+    .strengths-section {
+        position: relative;
+        flex-direction: row;
+        text-align: left;
+        height: 100vh;
+    }
+
+    .infra-section {
+        text-align: left;
+        background-position: -85% 80%;
+        background-size: 80% auto, 100% 100%;
+    }
+
+    .infra-section main {
+        width: 50%;
+    }
+
+    .phone-img-container {
+        width: 50%;
+        position: relative;
+    }
+
+    .phone-img {
+        top: 0;
+        right: 0;
+        margin: auto;
+        width: auto;
+    }
+
+    .illustration-editor-container,
+    .illustration-laptop-container {
+        position: relative;
+    }
+
+    .illustration-editor-container,
+    .illustration-laptop-container,
+    .strengths-section main {
+        width: 50%;
+    }
+
+    .infra-section main,
+    .strengths-section main {
+        padding-right: 9rem;
+    }
+
+    .banner-main h2 span::after,
+    .banner-main h3 span::after {
+        content: "";
+        white-space: normal;
+    }
+
+    .footer footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: left;
+        align-items: baseline;
+    }
+}
